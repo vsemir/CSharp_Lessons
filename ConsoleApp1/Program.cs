@@ -58,7 +58,7 @@ else
 }
 */
 
-
+/*
 Console.WriteLine("------ Задача 10 -------\n");
 Console.Write("Введите a: ");
 int a5 =  Convert.ToInt32(Console.ReadLine());
@@ -154,3 +154,50 @@ if (a9 < 1)
         break;
     }
 }
+*/
+
+
+
+Console.WriteLine("------ Задача 23 -------");
+void QuadroTable(int N) 
+{
+    for (int i = 1; i <= N; i++)
+    {
+        Console.WriteLine(i + "-" + (i*i*i)); 
+    }
+} 
+Console.WriteLine("введите число: "); 
+int N = Convert.ToInt32(Console.ReadLine()); 
+QuadroTable(N);
+
+
+Console.WriteLine("------ Задача 19 -------");
+Boolean palindrom(int num) 
+{
+    return (num/10000 == num%10)&&(num/1000%10 == num%100/10);
+}
+Console.WriteLine("введите 5ти значное число"); 
+int n = Convert.ToInt32(Console.ReadLine()); 
+if (palindrom(n) && (n > 9999 || n < 100000)) 
+    Console.WriteLine("полиндром"); 
+else 
+    Console.WriteLine("не полиндром");
+    
+Console.WriteLine("------ Задача 21 -------");
+int[] arrayCreate()
+{
+    int[] array = new int[3];
+    Console.WriteLine("Введите x");
+    array[0] = Convert.ToInt32(Console.ReadLine()); 
+    Console.WriteLine("Введите y");
+    array[1] = Convert.ToInt32(Console.ReadLine()); 
+    Console.WriteLine("Введите z");
+    array[2] = Convert.ToInt32(Console.ReadLine());
+    return array;
+}
+
+Console.WriteLine("Введите точку А ");
+int[] a = arrayCreate(); 
+Console.WriteLine("Введите точку B");
+int[] b = arrayCreate(); 
+Console.WriteLine("Расстояние между точками = " + Math.Round(Math.Sqrt(Math.Pow(a[0]-b[0],2) + Math.Pow(a[1]-b[1],2) + Math.Pow(a[2]-b[2],2)), 2));
